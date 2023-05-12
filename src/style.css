@@ -32,6 +32,39 @@ header h1 {
   transform: rotate(2deg);
 }
 
+/* task form */
+
+.new-task-form {
+  background: #e7e7e7;
+  padding: 20px 0;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+}
+
+form button {
+  background: #ffd859;
+  border: 0;
+  padding: 10px;
+  font-weight: 400;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+form input {
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+  color: #555;
+  font-size: 1em;
+}
+
 /* task list */
 .task-list {
   max-width: 640px;
@@ -63,4 +96,45 @@ header h1 {
   margin-left: 6px;
   cursor: pointer;
   color: #bbb;
+}
+
+/* Heart active */
+
+.task i.active {
+  color: #ff005d;
+}
+
+/* filter nav */
+
+.filter {
+  width: 640px;
+  margin: 10px auto;
+  text-align: right;
+}
+
+.filter button {
+  display: inline-block;
+  margin-left: 10px;
+  background: #fff;
+  border: 2px solid #555;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Dropdown style */
+
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+/* Style the options within the select element */
+option {
+  background-color: #f9f9f9;
+  color: #333;
 }
