@@ -22,29 +22,38 @@
       </select>
     </div>
 
+    <!-- loading -->
+    <div class="loading" v-if="loading">Loading ...</div>
+
     <!-- task list -->
     <div class="task-list" v-if="favTasks === 'all'">
-      <p>You have {{ taskStore.allTasksCount }} tasks to do</p>
-      <div v-for="task in taskStore.tasks" :key="task.id">
+      <p>You have {{ allTasksCount }} tasks to do</p>
+      <div v-for="task in tasks" :key="task.id">
         <TaskDetails :task="task" />
       </div>
     </div>
     <!-- fave list -->
     <div class="task-list" v-if="favTasks === 'favs'">
-      <p>You have {{ taskStore.favCount }} favs tasks to do</p>
-      <div v-for="task in taskStore.favs" :key="task.id">
+      <p>You have {{ favCount }} favs tasks to do</p>
+      <div v-for="task in favs" :key="task.id">
         <TaskDetails :task="task" />
       </div>
     </div>
+    <!-- <button @click="taskStore.$reset">Reset State</button> -->
   </main>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import { storeToRefs } from "pinia";
 import { useTaskStore } from "../stores/TaskStore";
 import TaskDetails from "./components/TaskDetails.vue";
 import TaskForm from "./components/TaskForm.vue";
 
 const taskStore = useTaskStore();
 const favTasks = ref("all");
+const { tasks, loading, favs, favCount, allTasksCount } =
+  storeToRefs(taskStore);
+
+taskStore.getTasks();
 </script>

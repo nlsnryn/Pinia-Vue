@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "learn vue js",
+      "isFav": false
+    },
+    {
+      "id": 4,
+      "title": "watching reels",
+      "isFav": true
+    },
+    {
+      "id": 5,
+      "title": "watching mpl",
+      "isFav": true
+    },
+    {
+      "id": 6,
+      "title": "play mobile games",
+      "isFav": true
+    },
+    {
+      "id": 7,
+      "title": "watching sea games",
+      "isFav": true
+    }
+  ]
+}

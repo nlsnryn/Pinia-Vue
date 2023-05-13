@@ -29,7 +29,5 @@ const handleSubmit = () => {
 
     newTask.value = "";
   }
-
-  console.log(taskStore.tasks);
 };
 </script>
