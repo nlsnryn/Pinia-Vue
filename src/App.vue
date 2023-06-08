@@ -36,13 +36,13 @@
       </select>
     </div>
 
-    <!-- loading -->
+    <!-- loading
     <div
       class="mx-auto my-7 bg-red-300 max-w-[640px] border border-red-500 text-gray-500 p-1 text-center"
       v-if="loading"
     >
       Loading ...
-    </div>
+    </div> -->
 
     <!-- task list -->
     <div class="max-w-[640px] my-5 mx-auto" v-if="favTasks === 'all'">
